@@ -275,6 +275,13 @@ line-height: 26px;
 		window.onload = function() {
             window.scrollTo(0, 0);
         };
+
+	    function requestFullscreen() {
+    if (window.parent) {
+        window.parent.postMessage('requestFullscreen', '*');
+    }
+}
+
     </script>
 </body>
 </html>
